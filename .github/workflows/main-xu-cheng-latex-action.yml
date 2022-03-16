@@ -14,12 +14,8 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           root_file: holaMundo.tex
-  subidaHolaMundo:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-      - uses: actions/upload-artifact@v2
+      - name: subidaHolaMundo
+        uses: actions/upload-artifact@v2
         with:
           name: PDF
           path: holaMundo.pdf
