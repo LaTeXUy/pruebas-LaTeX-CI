@@ -20,7 +20,10 @@ jobs:
           name: PDF
           path: holaMundo.pdf
       - name: Download a Build Artifact
-        uses: actions/download-artifact@v2.0.9
+        uses: actions/download-artifact@v3
         with: 
             name: PDF 
             path: path/to/PDF
+      - name: Display structure of downloaded files
+        run: ls -R
+        working-directory: path/to/artifact
