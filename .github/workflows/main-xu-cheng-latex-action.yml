@@ -10,7 +10,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Set up Git repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
         with:
@@ -20,10 +20,10 @@ jobs:
         with:
           name: PDF
           path: holaMundo.pdf
-#      - name: Download a Build Artifact
-#        uses: actions/download-artifact@v3
-#        with: 
-#            name: PDF 
-#            path: PDF
-#      - name: Display structure of downloaded files
-#        run: ls -R
+      - name: Download a Build Artifact
+        uses: actions/download-artifact@v3
+        with: 
+          name: PDF 
+#          path: PDF
+      - name: Display structure of downloaded files
+        run: ls -R
