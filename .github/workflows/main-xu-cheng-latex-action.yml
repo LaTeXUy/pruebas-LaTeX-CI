@@ -6,23 +6,23 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
+
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Set up Git repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
         with:
           root_file: holaMundo.tex
       - name: subidaHolaMundo
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: PDF
           path: holaMundo.pdf
-      - name: Download a Build Artifact
-        uses: actions/download-artifact@v3
-        with: 
-            name: PDF 
-            path: PDF
-      - name: Display structure of downloaded files
-        run: ls -R
+#      - name: Download a Build Artifact
+#        uses: actions/download-artifact@v3
+#        with: 
+#          name: PDF 
+#      - name: Display structure of downloaded files
+#        run: ls -R
