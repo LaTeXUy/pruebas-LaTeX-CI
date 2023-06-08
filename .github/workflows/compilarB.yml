@@ -21,6 +21,7 @@ jobs:
         with:
           name: PDF
           path: holaMundoB.pdf
+          working_directory: carpeta
 
 
 #      - name: Download a Build Artifact
