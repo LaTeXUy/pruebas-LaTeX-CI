@@ -14,13 +14,13 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: carpeta/holaMundoB.tex
+          root_file: holaMundoB.tex
           working_directory: carpeta
       - name: subidaHolaMundo
         uses: actions/upload-artifact@v3
         with:
           name: PDF
-          path: carpeta/holaMundoB.pdf
+          path: holaMundoB.pdf
 
 
 #      - name: Download a Build Artifact
